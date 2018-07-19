@@ -42,7 +42,11 @@
 {
     _shop = shop;
     
-    self.iconView.image = [UIImage imageNamed:shop.icon];
+    if (shop.icon)
+    {
+        self.iconView.image = [UIImage imageNamed:shop.icon];
+    }
+    
     self.label.text = shop.name;
 }
 
